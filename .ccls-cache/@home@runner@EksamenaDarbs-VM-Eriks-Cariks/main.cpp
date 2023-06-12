@@ -66,7 +66,7 @@ void Jautajumi(){
     system("clear");
     Nosaukums();
     
-    cout<<"\t\t\trandSk tagad ir = "<<randSk[i]<<endl<<endl;  //parbaudijums
+    cout<<"\t\t\trandSk tagad ir = "<<randSk[i]<<endl<<endl;  //parbaudijums*
     
     cout<<i+1<<". Jautājums\n"<<VisiJautajumi[randSk[i]]<<endl<<endl;
     for(int j=0; j<4; j++){
@@ -74,8 +74,26 @@ void Jautajumi(){
     }
     cout<<endl<<"~ ";
     cin>>lietotajaAtbilde;
+
+    //-----------------------------Parbaude
+    do{
+      int talak;
+      if(lietotajaAtbilde==AtbildesIndekss[randSk[i]]){
+        cout<<"\nPareizi! :)";
+      }else{
+        cout<<"\nNepareizi! :(";
+      }
+      do{
+        cout<<"\n\nIevadi '1' lai tarpināt pildīt testu: \n\n";
+        cin>>talak;
+        if(talak!=1){
+          cout<<"\n\nDarbība nepastāv!";
+        }
+      }while(talak!=1);
+    }while(lietotajaAtbilde<1 || lietotajaAtbilde>4);
   }
 }
+
 
 
 int main() {
