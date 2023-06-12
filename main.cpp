@@ -16,45 +16,47 @@ void Jautajumi(){
 
   //-----------------------------Jautājumu teksts
   vector<string> VisiJautajumi = {      
-  "A jautājums", 
-  "B jautājums", 
-  "C jautājums", 
-  "D jautājums", 
-  "E jautājums", 
-  "F jautājums", 
-  "G jautājums", 
-  "H jautājums", 
-  "I jautājums", 
-  "J jautājums", 
-  "K jautājums", 
-  "L jautājums", 
-  "M jautājums", 
-  "N jautājums", 
-  "O jautājums"};
+  "Ja masīva pēdējam elementam indekss ir 4, kāds ir masīva lielums?", 
+  "Kā nomainīt masīva otro elementu uz 4?", 
+  "Dati masīva tiek izvietoti ___.", 
+  "Viendimensiju masīvu var iedomāties kā ___.", 
+  "Viendimensiju masīva var ievietot ___ ___ ___.", 
+  "Viendimensiju masīva katram elementam ir savs ___, sākot no ___.", 
+  "Kad mēs veidojam masīvu, datu tipam seko tā ___.", 
+  "Kā pareizi definēt masīva lielumu? (x - masīva lielums)", 
+  "Ja masīva int datu tipa mēs ierakstām mazāk elementu, nekā ir mūsu masīva lielums, tad elementi, kurus neesam definējuši, būs ___.", 
+  "Lai izvadītu lielu elementu skaitu, mēs izmantojam ciklu ___.", 
+  "Lai masīvu, kas sakārtots augošā secībā, sakārtotu dilstošā secībā, vajag nomainīt zīmi ___ uz zīmi___.", 
+  "Lai izveidotu masīvu, vispirms ir jānorāda, kāda veida ___ tajā glabāsim", 
+  "Kā masīvam pievienot elementus?", 
+  "Kurā rindā ir kļūda?\n\na. atzimes[4] = {1, 3, 5, 2};\nb. for (int i=0; i<4; i+){\nc.   cout<<atzimes[i]<<endl;}", 
+  "Izvēlēties pareizu apgalvojumu!"};
 
-  //-----------------------------Atbildes teksts
+  //-----------------------------Atbildes varianti
   vector<vector<string>> VisasAtbildes(15, vector<string>(4));
-  VisasAtbildes[0] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[1] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[2] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[3] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[4] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[5] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[6] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[7] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[8] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[9] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[10] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[11] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[12] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[13] = {"dfdf", "asdasd", "112df5d", "dfdf"};
-  VisasAtbildes[14] = {"dfdf", "asdasd", "112df5d", "dfdf"};
+  VisasAtbildes[0] = {"4", "5", "3", "4.0"};
+  VisasAtbildes[1] = {"masivs[0] = 4", "masivs[1] = 3", "masivs[2] = 4", "masivs[1] = 4"};
+  VisasAtbildes[2] = {"secīgi", "nejauši", "palielināti", "kārtīgi"};
+  VisasAtbildes[3] = {"plāksni", "lodziņu", "plauktu", "skapi"};
+  VisasAtbildes[4] = {"divu tipu datus", "viena tipa datus", "vairāku tipu datus", "dažādus datus"};
+  VisasAtbildes[5] = {"elements, indekss", "indekss, 1", "0", "indekss, 0"};
+  VisasAtbildes[6] = {"datu tips", "indekss", "elements", "nosaukums"};
+  VisasAtbildes[7] = {"int masivs[x];", "int masivs{x}", "string masivs[x-1]", "int masivs[] = {x}"};
+  VisasAtbildes[8] = {"neviens atbilžu variants nav pareizs", "1", "0", "null"};
+  VisasAtbildes[9] = {"if", "cout<<", "int", "for"};
+  VisasAtbildes[10] = {"vairāk, mazāk", "mazāk, vairāk", "vairāk, ==", "vairāk, lielāk"};
+  VisasAtbildes[11] = {"datus", "skaitļus", "burtus", "indeksus"};
+  VisasAtbildes[12] = {"string skaitli[3] = {1,2,3}", "int skaitli[3] = {1,2,3}", "skaitli int[3] = {1,2,3}", "int skaitli[1,2,3]"};
+  VisasAtbildes[13] = {"a", "b un c", "a un c", "b"};
+  VisasAtbildes[14] = {"Viendimensiju masīvam ir fiksēts izmērs", "Viendimensiju masīvam nav fiksēts izmērs", "Viendimensiju masīviem ir tads nosaukums jo viņi var glabāt tikai vienu datu tipu", "Viendimensiju masīvi ir grūti"};
 
   //-----------------------------Pareizas atbildes indekss
   vector<int> AtbildesIndekss = {
-  1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1 };
-
+  2, 4, 1, 3, 2, 4, 4, 1, 3, 4, 1, 1, 2, 4, 1 };
+//                           10
   vector<int> NepareizasAtbildes;    //Vektors kurš glabās neparezas atbildes indeksu
+
+  vector<int> NepareizasAtbildesNr;
   
   vector<int> randSk;        //Vektors ar skaitļiem nejaušā secībā
   for(int i=0; i<KopJautajumuSkaits; i++){
@@ -68,7 +70,7 @@ void Jautajumi(){
     system("clear");
     Nosaukums();
     
-    cout<<"\t\t\trandSk tagad ir = "<<randSk[i]<<endl<<endl;  //parbaudijums*
+    //cout<<"\t\t\trandSk tagad ir = "<<randSk[i]<<endl<<endl;  //parbaudijums*
     
     cout<<i+1<<". Jautājums\n"<<VisiJautajumi[randSk[i]]<<endl<<endl;
     for(int j=0; j<4; j++){
@@ -86,6 +88,7 @@ void Jautajumi(){
       }else{
         cout<<"\nNepareizi! :(";
         NepareizasAtbildes.push_back(randSk[i]);
+        NepareizasAtbildesNr.push_back(i+1);
       }
       do{
         cout<<"\n\nIevadi '1' lai turpināt pildīt testu: \n\n";
@@ -100,13 +103,13 @@ void Jautajumi(){
   //-----------------------------Rezultāts
   system("clear");
   Nosaukums();
-  cout<<"\n\nTavs punktu skaits: "<<punkti<<"\n\n";
+  cout<<"\n\nTavs punktu skaits: \x1b[38;5;10m"<<punkti<<"\x1b[0m\n\n";
   int uzSakumu;
   if(!NepareizasAtbildes.empty()){
     
-    cout<<"Jautājumi, uz kuriem atbildējāt nepareizi:\n\n";
+    cout<<"Jautājumi, uz kuriem tu atbildēji nepareizi:\n\n\n";
     for(int i=0; i<NepareizasAtbildes.size(); i++){
-      cout<<VisiJautajumi[NepareizasAtbildes[i]]<<endl;
+      cout<<NepareizasAtbildesNr[i]<<". "<<VisiJautajumi[NepareizasAtbildes[i]]<<endl<<endl;
     }
   }else{
     cout<<"\n\nMalacis!\n\nTu atbildēji uz visiem jautājumiem bez nevienas kļūdas!";
@@ -122,7 +125,6 @@ void Jautajumi(){
 }
 
 
-
 //-----------------------------Main daļa
 int main() {
   srand(time(0));
@@ -134,7 +136,7 @@ int main() {
   do{
     system("clear");
     Nosaukums();
-    cout<<"Sveicināti testā par viendimensiju masīviem programmēšanas valodā C++! \n\nTestā ir 10 jautājumi, kas ir sakārtoti nejaušā secībā. Katram jautājumam ir 4 iespējamās atbildes, bet tikai 1 no tām ir pareiza. \n\nPēc tam, kad atbildēsiet uz jautājumu, programma parādīs, vai jūs atbildējāt pareizi vai nē. Testa beigās jums tiks sniegts to jautājumu saraksts, uz kuriem jūs atbildējāt nepareizi!\n\nIzvēlies darbību:\n\n";
+    cout<<"Sveicināti testā par viendimensiju masīviem programmēšanas valodā C++! \n\nTestā ir 10 jautājumi, kas ir sakārtoti nejaušā secībā. Katram jautājumam ir 4 iespējamās atbildes, bet tikai 1 no tām ir pareiza. \n\nPēc tam, kad atbildēsiet uz jautājumus, programma parādīs, vai jūs atbildējāt pareizi vai nē. Testa beigās jums tiks sniegts jūsu punktu skaits un jautājumu saraksts, uz kuriem jūs atbildējāt nepareizi!\n\nIzvēlies darbību:\n\n";
     cout<<"\x1b[38;5;10m1 - Sākt testu\n";
     cout<<"\x1b[38;5;202m0 - Apturēt programmu\n\n\x1b[0m~ \x1b[0m";
     cin>>izvele;
