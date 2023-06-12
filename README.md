@@ -14,18 +14,18 @@ Autors: Ēriks Cariks
 
 - [x] Informatīvais mācību materiāls
 - [x] Projekta plānošana un vizualizēšana, izstrādājot divas UML diagrammas
-- [ ] Izstrādāt programmatūru (testu)
+- [x] Izstrādāt programmatūru (testu)
 
 
 
-![](https://geps.dev/progress/60)
+![](https://geps.dev/progress/100)
 
 # Tests, mācību materiāli un UML diagrammas
 
 - [Tests (replit)](https://replit.com/@cariks/EksamenaDarbs-VM-Eriks-Cariks)
 - [Prezentācija Viendimensiju masīvi](https://docs.google.com/presentation/d/1dYvp180LF9ZZVPJw0VgUqcE6Aft00WL-6P2P8JIWzFw/edit?usp=sharing)
-- [Use Case Diagramma](#usage)
-- [Activity Diagramma](#credits)
+- [Use Case Diagramma](https://github.com/cariks/EksamenaDarbs-VM-Eriks-Cariks/blob/main/Use%20Case%20Diagramma.drawio.png)
+- [Activity Diagramma](https://github.com/cariks/EksamenaDarbs-VM-Eriks-Cariks/blob/main/Activity%20Diagramma.drawio.png)
 
 
 
@@ -51,3 +51,7 @@ Autors: Ēriks Cariks
 <sub> **saite ar masīva šķirošanas kodu*</sub>
 
 [arraysort](https://prepinsta.com/data-structures-algorithms/sorting-of-array/)
+
+<sub> **saite us prezentācijas šablonu*</sub>
+
+[slidesgo](https://slidesgo.com/)
