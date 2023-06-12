@@ -59,14 +59,27 @@ void Jautajumi(){
     randSk.push_back(i);
   }
   random_shuffle(randSk.begin(), randSk.end());    //Sajaukt skaitļus vektorā
-
+  
+  int nejausausIndekss;
+  int lietotajaAtbilde;
   for(int i=0; i<CikJautajumusParadit; i++){
+    system("clear");
+    Nosaukums();
     
+    cout<<"\t\t\trandSk tagad ir = "<<randSk[i]<<endl<<endl;  //parbaudijums
+    
+    cout<<i+1<<". Jautājums\n"<<VisiJautajumi[randSk[i]]<<endl<<endl;
+    for(int j=0; j<4; j++){
+      cout<<j+1<<". "<<VisasAtbildes[randSk[i]][j]<<endl;
+    }
+    cout<<endl<<"~ ";
+    cin>>lietotajaAtbilde;
   }
 }
 
 
 int main() {
+  srand(time(0));
   
   int izvele;
   bool apturet=false;
@@ -82,8 +95,6 @@ int main() {
 
     switch(izvele){
       case 1:
-        system("clear");
-        Nosaukums();
         Jautajumi();
         int test;
         cin>>test;
