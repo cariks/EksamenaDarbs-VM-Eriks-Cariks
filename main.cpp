@@ -53,6 +53,7 @@ void Jautajumi(){
   vector<int> AtbildesIndekss = {
   1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1 };
 
+  vector<int> NepareizasAtbildes;    //Vektors kurš glabās neparezas atbildes indeksu
   
   vector<int> randSk;        //Vektors ar skaitļiem nejaušā secībā
   for(int i=0; i<KopJautajumuSkaits; i++){
@@ -82,6 +83,7 @@ void Jautajumi(){
         cout<<"\nPareizi! :)";
       }else{
         cout<<"\nNepareizi! :(";
+        NepareizasAtbildes.push_back(randSk[i]);
       }
       do{
         cout<<"\n\nIevadi '1' lai tarpināt pildīt testu: \n\n";
@@ -92,6 +94,27 @@ void Jautajumi(){
       }while(talak!=1);
     }while(lietotajaAtbilde<1 || lietotajaAtbilde>4);
   }
+  
+  //-----------------------------Rezultāts
+  system("clear");
+  Nosaukums();
+  int uzSakumu;
+  if(!NepareizasAtbildes.empty()){
+    
+    cout<<"Nepareizas atbildes nr.\n\n";
+    for(int i=0; i<NepareizasAtbildes.size(); i++){
+      cout<<NepareizasAtbildes[i]<<endl;
+    }
+  }else{
+    cout<<"\n\nMalacis!\n\nTu atbildēji uz visiem jautājumiem bez nevienas kļūdas!";
+  }
+  do{
+    cout<<"\n\nIevadi '1' lai tarpināt pildīt testu: \n\n";
+    cin>>uzSakumu;
+    if(uzSakumu!=1){
+      cout<<"\n\nDarbība nepastāv!";
+    }
+  }while(uzSakumu!=1);
 }
 
 
