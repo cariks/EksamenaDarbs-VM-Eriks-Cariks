@@ -9,6 +9,7 @@ void Nosaukums(){
 }
 
 void Jautajumi(){
+  int punkti=0;
   int CikJautajumusParadit = 10;    //Cik jautājumus paradīt testā?
   int KopJautajumuSkaits = 15;      //Kopējais jautājumu skaits
 
@@ -81,6 +82,7 @@ void Jautajumi(){
       int talak;
       if(lietotajaAtbilde==AtbildesIndekss[randSk[i]]){
         cout<<"\nPareizi! :)";
+        punkti++;
       }else{
         cout<<"\nNepareizi! :(";
         NepareizasAtbildes.push_back(randSk[i]);
@@ -98,6 +100,7 @@ void Jautajumi(){
   //-----------------------------Rezultāts
   system("clear");
   Nosaukums();
+  cout<<"\n\nTavs punktu skaits: "<<punkti<<"\n\n";
   int uzSakumu;
   if(!NepareizasAtbildes.empty()){
     
