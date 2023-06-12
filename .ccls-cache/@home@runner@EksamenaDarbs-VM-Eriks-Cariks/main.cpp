@@ -86,7 +86,7 @@ void Jautajumi(){
         NepareizasAtbildes.push_back(randSk[i]);
       }
       do{
-        cout<<"\n\nIevadi '1' lai tarpināt pildīt testu: \n\n";
+        cout<<"\n\nIevadi '1' lai turpināt pildīt testu: \n\n";
         cin>>talak;
         if(talak!=1){
           cout<<"\n\nDarbība nepastāv!";
@@ -101,24 +101,26 @@ void Jautajumi(){
   int uzSakumu;
   if(!NepareizasAtbildes.empty()){
     
-    cout<<"Nepareizas atbildes nr.\n\n";
+    cout<<"Jautājumi, uz kuriem atbildējāt nepareizi:\n\n";
     for(int i=0; i<NepareizasAtbildes.size(); i++){
-      cout<<NepareizasAtbildes[i]<<endl;
+      cout<<VisiJautajumi[NepareizasAtbildes[i]]<<endl;
     }
   }else{
     cout<<"\n\nMalacis!\n\nTu atbildēji uz visiem jautājumiem bez nevienas kļūdas!";
   }
+  
   do{
-    cout<<"\n\nIevadi '1' lai tarpināt pildīt testu: \n\n";
+    cout<<"\n\nIevadi '2' lai atgriezties uz sākumu: \n\n";
     cin>>uzSakumu;
-    if(uzSakumu!=1){
-      cout<<"\n\nDarbība nepastāv!";
+    if(uzSakumu!=2){
+      cout<<"Darbība nepastāv!";
     }
-  }while(uzSakumu!=1);
+  }while(uzSakumu!=2);
 }
 
 
 
+//-----------------------------Main daļa
 int main() {
   srand(time(0));
   
@@ -137,8 +139,6 @@ int main() {
     switch(izvele){
       case 1:
         Jautajumi();
-        int test;
-        cin>>test;
       break;
       
       case 0:
