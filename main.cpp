@@ -5,14 +5,13 @@
 using namespace std;
 
 void Nosaukums(){
-  cout<<"\x1b[38;5;0m  <<  \x1b[38;5;221mC++ Viendimensiju Masīvi Test\x1b[38;5;221m\x1b[38;5;0m >> \x1b[0m\n\n\n";
+  cout<<"\x1b[38;5;0m  <<  \e[1;32mC++ Viendimensiju Masīvi Test\e[0m\x1b[38;5;0m >> \x1b[0m\n\n";
 }
 
 void Jautajumi(){
   int punkti=0;
   int CikJautajumusParadit = 10;    //Cik jautājumus paradīt testā?
   int KopJautajumuSkaits = 15;      //Kopējais jautājumu skaits
-
 
   //-----------------------------Jautājumu teksts
   vector<string> VisiJautajumi = {      
@@ -69,12 +68,11 @@ void Jautajumi(){
   for(int i=0; i<CikJautajumusParadit; i++){
     system("clear");
     Nosaukums();
-    
-    //cout<<"\t\t\trandSk tagad ir = "<<randSk[i]<<endl<<endl;  //parbaudijums*
-    
-    cout<<i+1<<". Jautājums\n"<<VisiJautajumi[randSk[i]]<<endl<<endl;
+
+    //-----------------------------Parādīt jautājumu un atbilžu variantus
+    cout<<"\e[0;32m"<<i+1<<"\e[1;37m. Jautājums\n\n"<<VisiJautajumi[randSk[i]]<<"\e[0m"<<endl<<endl;
     for(int j=0; j<4; j++){
-      cout<<j+1<<". "<<VisasAtbildes[randSk[i]][j]<<endl;
+      cout<<"\e[0;32m"<<j+1<<"\e[0m. "<<VisasAtbildes[randSk[i]][j]<<endl;
     }
     cout<<endl<<"~ ";
     cin>>lietotajaAtbilde;
@@ -82,10 +80,11 @@ void Jautajumi(){
     //-----------------------------Pārbaude vai atbilde ir diapazona no 1 līdz 4 
     do{
       if(lietotajaAtbilde<1 || lietotajaAtbilde>4){
-        cout<<"\n\e[0;31mDarbība nepastāv!\e[0m\n\nIzvēlies atbildi diapazonā no 1 līdz 4!\n\n~ ";
+        cout<<"\n\e[0;31mDarbība nepastāv!\e[1;37m\n\nIzvēlies atbildi diapazonā no '\e[0;32m1\e[1;37m' līdz '\e[0;32m4\e[1;37m'!\n\n\e[0m~ ";
         cin>>lietotajaAtbilde;
       }
     }while(lietotajaAtbilde<1 || lietotajaAtbilde>4);
+    
     //-----------------------------Pārbaude vai atbilde ir pareiza
     if(lietotajaAtbilde==AtbildesIndekss[randSk[i]]){
       cout<<"\n\e[0;32mPareizi! :)\e[0m";
@@ -95,10 +94,11 @@ void Jautajumi(){
       NepareizasAtbildes.push_back(randSk[i]);
       NepareizasAtbildesNr.push_back(i+1);
     }
+    
     //-----------------------------Ievadi 1 lai turpināt
     int talak;
     do{
-      cout<<"\n\n\e[1;37mIevadi '1' lai turpināt pildīt testu:\n\n\e[0m~ ";
+      cout<<"\n\n\e[1;37mIevadi '\e[0;32m1\e[1;37m' lai turpināt pildīt testu:\n\n\e[0m~ ";
       cin>>talak;
       if(talak!=1){
         cout<<"\n\e[0;31mDarbība nepastāv!\e[0m";
@@ -109,44 +109,39 @@ void Jautajumi(){
   //-----------------------------Rezultāts
   system("clear");
   Nosaukums();
-  cout<<"\n\nTavs punktu skaits: \x1b[38;5;10m"<<punkti<<"\x1b[0m\n\n";
+  cout<<"\e[1;37mTavs punktu skaits: \x1b[38;5;10m"<<punkti<<"\x1b[0m\n\n";
+  cout<<"\e[1;32m____________________________________________\n\n";
   int uzSakumu;
   if(!NepareizasAtbildes.empty()){
-    
-    cout<<"Jautājumi, uz kuriem tu atbildēji nepareizi:\n\n\n";
+    cout<<"\e[1;37mJautājumi, uz kuriem tu atbildēji \e[1;31mnepareizi\e[1;37m:\n\n";
     for(int i=0; i<NepareizasAtbildes.size(); i++){
-      cout<<NepareizasAtbildesNr[i]<<". "<<VisiJautajumi[NepareizasAtbildes[i]]<<endl<<endl;
+      cout<<"\e[1;31m"<<NepareizasAtbildesNr[i]<<"\e[0m. "<<VisiJautajumi[NepareizasAtbildes[i]]<<endl<<endl;
     }
   }else{
-    cout<<"\n\nMalacis!\n\nTu atbildēji uz visiem jautājumiem bez nevienas kļūdas!";
+    cout<<"\n\n\e[1;32mMalacis!\n\nTu atbildēji uz visiem jautājumiem bez nevienas kļūdas!";
   }
-  
+  cout<<"\e[1;32m____________________________________________";
   do{
-    cout<<"\n\nIevadi '2' lai atgriezties uz sākumu: \n\n";
+    cout<<"\n\n\e[1;37mIevadi '\e[0;32m2\e[1;37m' lai atgriezties uz sākumu: \n\n";
     cin>>uzSakumu;
     if(uzSakumu!=2){
-      cout<<"\nDarbība nepastāv!";
+      cout<<"\n\e[0;31mDarbība nepastāv!\e[0m";
     }
   }while(uzSakumu!=2);
 }
 
-
-//-----------------------------Main daļa
+//-------------------------------Main daļa
 int main() {
   srand(time(0));
-  
   int izvele;
   bool apturet=false;
-
-  //---------------Sākumlogs
   do{
     system("clear");
     Nosaukums();
-    cout<<"Sveicināti testā par viendimensiju masīviem programmēšanas valodā C++! \n\nTestā ir 10 jautājumi, kas ir sakārtoti nejaušā secībā. Katram jautājumam ir 4 iespējamās atbildes, bet tikai 1 no tām ir pareiza. \n\nPēc tam, kad atbildēsiet uz jautājumus, programma parādīs, vai jūs atbildējāt pareizi vai nē. Testa beigās jums tiks sniegts jūsu punktu skaits un jautājumu saraksts, uz kuriem jūs atbildējāt nepareizi!\n\nIzvēlies darbību:\n\n";
-    cout<<"\x1b[38;5;10m1 - Sākt testu\n";
-    cout<<"\x1b[38;5;202m0 - Apturēt programmu\n\n\x1b[0m~ \x1b[0m";
+    cout<<"Sveicināti testā par viendimensiju masīviem programmēšanas valodā C++! \n\nTestā ir 10 jautājumi, kas ir sakārtoti nejaušā secībā. Katram jautājumam ir 4 iespējamās atbildes, bet tikai 1 no tām ir pareiza. \n\nPēc tam, kad atbildēsiet uz jautājumus, programma parādīs, vai jūs atbildējāt pareizi vai nē. Testa beigās jums tiks sniegts jūsu punktu skaits un jautājumu saraksts, uz kuriem jūs atbildējāt nepareizi!\n\n\e[1;37mIzvēlies darbību:\e[0m\n\n";
+    cout<<"\e[0;32m1 - Sākt testu\n";
+    cout<<"\e[0;31m0 - Apturēt programmu\n\n\e[0m~ ";
     cin>>izvele;
-
     switch(izvele){
       case 1:
         Jautajumi();
@@ -154,7 +149,7 @@ int main() {
       
       case 0:
         system("clear");
-        cout<<"\x1b[38;5;202m!Programma ir apturēta!";
+        cout<<"\e[0;31m!Programma ir apturēta!";
         apturet=true;
       break;
 
@@ -162,7 +157,7 @@ int main() {
         int atpakal=0;
         do{
           system("clear");
-          cout<<"\x1b[38;5;202m!Darbība nepastāv, rādas kļūda!\n\n\n\x1b[0mIevadi '\x1b[38;5;10m1\x1b[0m' lai atgriezties!\n\n~ ";
+          cout<<"\e[0;31mDarbība nepastāv!\n\n\n\e[1;37mIevadi '\e[0;32m1\e[1;37m' lai atgriezties!\n\n\e[0m~ ";
           cin>>atpakal;
           system("clear");
         }while(atpakal!=1);
