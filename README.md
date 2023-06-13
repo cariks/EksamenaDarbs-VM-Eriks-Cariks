@@ -15,6 +15,7 @@ Autors: Ēriks Cariks
 - [x] Informatīvais mācību materiāls
 - [x] Projekta plānošana un vizualizēšana, izstrādājot divas UML diagrammas
 - [x] Izstrādāt programmatūru (testu)
+- [x] Prezentācija prezentēšanai
 
 
 
@@ -26,6 +27,9 @@ Autors: Ēriks Cariks
 - [Prezentācija Viendimensiju masīvi](https://docs.google.com/presentation/d/1dYvp180LF9ZZVPJw0VgUqcE6Aft00WL-6P2P8JIWzFw/edit?usp=sharing)
 - [Use Case Diagramma](https://github.com/cariks/EksamenaDarbs-VM-Eriks-Cariks/blob/main/Use%20Case%20Diagramma.drawio.png)
 - [Activity Diagramma](https://github.com/cariks/EksamenaDarbs-VM-Eriks-Cariks/blob/main/Activity%20Diagramma.drawio.png)
+
+
+- [Prezentācija prezentēšanai](https://docs.google.com/presentation/d/1FTgY7aIjPFl8Dv0UbyT_iUPr70iGlSfw4irvuFsQPyw/edit?usp=sharing)
 
 
 # Testa apraksts
