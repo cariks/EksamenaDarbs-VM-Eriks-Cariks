@@ -79,25 +79,31 @@ void Jautajumi(){
     cout<<endl<<"~ ";
     cin>>lietotajaAtbilde;
 
-    //-----------------------------Parbaude
+    //-----------------------------Pārbaude vai atbilde ir diapazona no 1 līdz 4 
     do{
-      int talak;
-      if(lietotajaAtbilde==AtbildesIndekss[randSk[i]]){
-        cout<<"\nPareizi! :)";
-        punkti++;
-      }else{
-        cout<<"\nNepareizi! :(";
-        NepareizasAtbildes.push_back(randSk[i]);
-        NepareizasAtbildesNr.push_back(i+1);
+      if(lietotajaAtbilde<1 || lietotajaAtbilde>4){
+        cout<<"\n\e[0;31mDarbība nepastāv!\e[0m\n\nIzvēlies atbildi diapazonā no 1 līdz 4!\n\n~ ";
+        cin>>lietotajaAtbilde;
       }
-      do{
-        cout<<"\n\nIevadi '1' lai turpināt pildīt testu: \n\n";
-        cin>>talak;
-        if(talak!=1){
-          cout<<"\n\nDarbība nepastāv!";
-        }
-      }while(talak!=1);
     }while(lietotajaAtbilde<1 || lietotajaAtbilde>4);
+    //-----------------------------Pārbaude vai atbilde ir pareiza
+    if(lietotajaAtbilde==AtbildesIndekss[randSk[i]]){
+      cout<<"\n\e[0;32mPareizi! :)\e[0m";
+      punkti++;
+    }else{
+      cout<<"\n\e[0;31mNepareizi! :(\e[0m";
+      NepareizasAtbildes.push_back(randSk[i]);
+      NepareizasAtbildesNr.push_back(i+1);
+    }
+    //-----------------------------Ievadi 1 lai turpināt
+    int talak;
+    do{
+      cout<<"\n\n\e[1;37mIevadi '1' lai turpināt pildīt testu:\n\n\e[0m~ ";
+      cin>>talak;
+      if(talak!=1){
+        cout<<"\n\e[0;31mDarbība nepastāv!\e[0m";
+      }
+    }while(talak!=1);
   }
   
   //-----------------------------Rezultāts
@@ -119,7 +125,7 @@ void Jautajumi(){
     cout<<"\n\nIevadi '2' lai atgriezties uz sākumu: \n\n";
     cin>>uzSakumu;
     if(uzSakumu!=2){
-      cout<<"Darbība nepastāv!";
+      cout<<"\nDarbība nepastāv!";
     }
   }while(uzSakumu!=2);
 }
