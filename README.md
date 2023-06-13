@@ -28,6 +28,8 @@ Autors: Ēriks Cariks
 - [Activity Diagramma](https://github.com/cariks/EksamenaDarbs-VM-Eriks-Cariks/blob/main/Activity%20Diagramma.drawio.png)
 
 
+# Testa apraksts
+Tests ir par tēmu viendimensiju masīvi programmēšanas valodā C++! Testā ir 10 jautājumi, kas ir sakārtoti nejaušā secībā. Katram jautājumam ir 4 iespējamās atbildes, bet tikai 1 no tām ir pareiza. Pēc tam, kad atbildēsiet uz jautājumus, programma parādīs, vai jūs atbildējāt pareizi vai nē. Testa beigās jums tiks sniegts jūsu punktu skaits un jautājumu saraksts, uz kuriem jūs atbildējāt nepareizi!
 
 ---
 ## Visi izmantotie avoti:
@@ -55,3 +57,7 @@ Autors: Ēriks Cariks
 <sub> **saite us prezentācijas šablonu*</sub>
 
 [slidesgo](https://slidesgo.com/)
+
+<sub> **saite us ansi color kodus (krāsains teksts*</sub>
+
+[ANSI-color](https://gist.github.com/RabaDabaDoba/145049536f815903c79944599c6f952a)
